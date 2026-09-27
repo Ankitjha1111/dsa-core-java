@@ -4,7 +4,7 @@ class Node12 {
     Node next;
     Node prev;
 
-    // Constructor: Naya node banane ke liye
+    // Constructer
     Node12(int data) {
         this.data = data;
         this.next = null;
@@ -12,7 +12,7 @@ class Node12 {
     }
 }
 
-// 2. Main DLL Class: Jahan saara logic (Insert/Delete) rahega
+// Main DLL Class
 public class DoublyLinkedList1 {
     Node head;
 
@@ -23,11 +23,11 @@ public class DoublyLinkedList1 {
             return;
         }
 
-        // Tera logic: head ko aage shift karo
+        
         head = head.next;
 
         if (head != null) {
-            head.prev = null; // Naye head ka pichla link kaat diya
+            head.prev = null; 
         }
         System.out.println(" deleted at head sucessfully!.");
     }
@@ -42,18 +42,17 @@ public class DoublyLinkedList1 {
         }
 
         Node temp = head;
-        // Last node tak pahunchna
+        
         while (temp.next != null) {
             temp = temp.next;
         }
 
-        // Tera logic: temp ab aakhiri node hai
-        // Uske pichle wale (temp.prev) ka 'next' null kar do
+        
         temp.prev.next = null;
         System.out.println("Sout: deleted at end sucessfully!.");
     }
 
-    // Insert function (Taaki test kar sako)
+    
     public void insert(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -85,8 +84,8 @@ public class DoublyLinkedList1 {
         System.out.println("Pehle:");
         dll.display();
 
-        dll.deleteAtEnd(); // 30 jayega
-        dll.deleteAtHead(); // 10 jayega
+        dll.deleteAtEnd(); 
+        dll.deleteAtHead(); 
 
 
         dll.display();
