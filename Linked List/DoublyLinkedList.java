@@ -13,7 +13,7 @@
  class DoublyLinkedList {
     Node head;
 
-    // 1. Insert at Head (Sabse Aage)
+    // 1. Insert at Head 
     public void insertAtHead(int data) {
         Node newNode = new Node(data);
         if (head != null) {
@@ -24,7 +24,7 @@
         System.out.println("Inserted " + data + " at Head");
     }
 
-    // 2. Insert at End (Sabse Peeche)
+    // 2. Insert at End 
     public void insertAtEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -40,10 +40,10 @@
         System.out.println("Inserted " + data + " at End");
     }
 
-    // 3. Insert After a Node (Jo tum diagram mein try kar rahe the)
+    // 3. Insert After a Node 
     public void insertAfter(int targetData, int newData) {
         Node temp = head;
-        // Pehle wo node dhundo jiske baad insert karna hai
+        
         while (temp != null && temp.data != targetData) {
             temp = temp.next;
         }
@@ -56,12 +56,12 @@
         Node newNode = new Node(newData);
 
         // --- ASALI LOGIC (4 Pointers) ---
-        newNode.next = temp.next; // 1. Naya node aage dekh raha hai
-        newNode.prev = temp;      // 2. Naya node piche dekh raha hai
-        temp.next = newNode;      // 3. Purana node ab naye ko dekh raha hai
+        newNode.next = temp.next; 
+        newNode.prev = temp;      
+        temp.next = newNode;      
 
         if (newNode.next != null) {
-            newNode.next.prev = newNode; // 4. Agle node ko piche mod diya
+            newNode.next.prev = newNode; 
         }
         System.out.println("Inserted " + newData + " after " + targetData);
     }
