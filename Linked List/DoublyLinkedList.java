@@ -55,7 +55,7 @@
 
         Node newNode = new Node(newData);
 
-        // --- ASALI LOGIC (4 Pointers) ---
+        
         newNode.next = temp.next; 
         newNode.prev = temp;      
         temp.next = newNode;      
@@ -66,7 +66,7 @@
         System.out.println("Inserted " + newData + " after " + targetData);
     }
 
-    // List dikhane ke liye
+    
     public void display() {
         Node temp = head;
         System.out.print("Current List: null <- ");
@@ -85,7 +85,7 @@
         dll.insertAtEnd(30);
         dll.display();
 
-        // Tumhare diagram wala case: 20 ke baad 25 insert karna
+        
         dll.insertAfter(20, 25);
         dll.display();
     }
